@@ -12,7 +12,8 @@ export class AppController {
     const files = await readdir(resolve(__dirname, '../wallpaper'));
     const url =
       'http://localhost:3000/wallpaper/' +
-      files[Math.floor(Math.random() * files.length - 1)];
+      files[Math.floor(Math.random() * files.length)];
+    console.log(url);
     return url;
   }
 }
